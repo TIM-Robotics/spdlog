@@ -58,13 +58,13 @@ protected:
 };
 
 template <typename ConsoleMutex>
-class wincolor_stdout_sink : public wincolor_sink<ConsoleMutex> {
+class wincolor_stdout_sink final : public wincolor_sink<ConsoleMutex> {
 public:
     explicit wincolor_stdout_sink(color_mode mode = color_mode::automatic);
 };
 
 template <typename ConsoleMutex>
-class wincolor_stderr_sink : public wincolor_sink<ConsoleMutex> {
+class wincolor_stderr_sink final : public wincolor_sink<ConsoleMutex> {
 public:
     explicit wincolor_stderr_sink(color_mode mode = color_mode::automatic);
 };
